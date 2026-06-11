@@ -6,14 +6,20 @@ import { Input } from "@/components/ui/input"; // We might need to create this i
 import { Textarea } from "@/components/ui/textarea"; // Same here.
 import { Mail, MapPin, Phone } from "lucide-react";
 import emailjs from "@emailjs/browser";
+
+
+const ServiceKEY = process.env.NEXT_PUBLIC_SERVICE_KEY;
+const Template_key = process.env.NEXT_PUBLIC_TEMPLATE_KEY;
+const Public_key = process.env.NEXT_PUBLIC_PUBLIC_KEY;
 const sendEmail = (e) => {
   e.preventDefault();
-  emailjs
-    .sendForm(
-      "service_c3s8hsv",
-      "template_75qhr29",
-      e.target,
-      "4K0WZwYBb9ipx1xvc",
+ emailjs.sendForm(
+      ServiceKEY,
+      Template_key,
+      e.currentTarget,
+      Public_key,
+
+      
     )
     .then(() => {
       alert("Message sent!");
