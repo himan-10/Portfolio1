@@ -11,13 +11,13 @@ import emailjs from "@emailjs/browser";
 const ServiceKEY = process.env.NEXT_PUBLIC_SERVICE_KEY;
 const Template_key = process.env.NEXT_PUBLIC_TEMPLATE_KEY;
 const Public_key = process.env.NEXT_PUBLIC_PUBLIC_KEY;
-const sendEmail = (e) => {
+const sendEmail = (e : React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
  emailjs.sendForm(
-      ServiceKEY,
-      Template_key,
+      ServiceKEY!,
+      Template_key!,
       e.currentTarget,
-      Public_key,
+      Public_key!,
 
       
     )
