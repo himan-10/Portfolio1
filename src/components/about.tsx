@@ -50,9 +50,9 @@ export function About() {
                 <div className="relative p-1 rounded-2xl bg-gradient-to-tr from-brand-violet via-brand-indigo to-brand-fuchsia shadow-xl shadow-brand-violet/10 max-w-md aspect-square w-full overflow-hidden">
                     <div className="relative w-full h-full rounded-xl overflow-hidden bg-bg-obsidian">
                        <img
-                            src="/profil.jpeg"
+                            src="/profile.png"
                             alt="Profile"
-                            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                            className="w-full f-full  object-cover transition-transform duration-500 hover:scale-105"
                         />
                     </div>
                 </div>
